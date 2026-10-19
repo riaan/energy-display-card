@@ -1,0 +1,19 @@
+name: Release check
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  version:
+    name: Tag matches VERSION
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check release tag against dist/energy-display-card.js and CHANGELOG.md
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+        run: node scripts/check-version.mjs "$TAG"

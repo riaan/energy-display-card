@@ -1,0 +1,20 @@
+{
+  "name": "energy-display-card",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Home Assistant Lovelace cards: Energy Display tiles and Energy House. Dev tooling only; nothing here ships.",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint dist scripts",
+    "format": "prettier --write .",
+    "check:version": "node scripts/check-version.mjs",
+    "serve": "npx http-server -c-1 -p 5050"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0",
+    "prettier": "^3.0.0"
+  }
+}

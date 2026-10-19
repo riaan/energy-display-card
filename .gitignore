@@ -1,0 +1,17 @@
+node_modules/
+.DS_Store
+*.log
+test/*.png
+test/screenshots/
+
+# AI agent files
+CLAUDE.md
+.claude/
+
+# Tests and demo pages
+test/
+
+# Editor and dev config
+.editorconfig
+.prettierrc
+.prettierignore

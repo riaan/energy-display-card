@@ -1,0 +1,24 @@
+name: Feature request
+description: Suggest an improvement or a new option
+labels: [enhancement]
+body:
+  - type: dropdown
+    id: card
+    attributes:
+      label: Which card?
+      options: [Energy Display (tiles), Energy House, Both / editor]
+    validations: { required: true }
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+    validations: { required: true }
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to see?
+      description: Sketches, example YAML or screenshots help.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered

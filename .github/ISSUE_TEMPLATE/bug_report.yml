@@ -1,0 +1,47 @@
+name: Bug report
+description: Something does not work as expected
+labels: [bug]
+body:
+  - type: dropdown
+    id: card
+    attributes:
+      label: Which card?
+      options: [Energy Display (tiles), Energy House, Both / editor]
+    validations: { required: true }
+  - type: input
+    id: version
+    attributes:
+      label: Card version
+      description: Shown in the browser console ("ENERGY-DISPLAY-CARD v…") and in HACS.
+    validations: { required: true }
+  - type: input
+    id: ha
+    attributes:
+      label: Home Assistant version
+    validations: { required: true }
+  - type: input
+    id: browser
+    attributes:
+      label: Browser / app
+      placeholder: Chrome 130 on macOS, Companion app on iOS, …
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened, and what did you expect?
+    validations: { required: true }
+  - type: textarea
+    id: config
+    attributes:
+      label: Card configuration (YAML)
+      description: Remove anything private.
+      render: yaml
+  - type: textarea
+    id: logs
+    attributes:
+      label: Browser console errors
+      render: text
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Drag and drop images here. Mention light or dark theme.
